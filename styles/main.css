@@ -15,7 +15,15 @@ body {
 	margin-bottom: 1em;
 	border-bottom: 2px solid #630;
 }
-
+.middleColumns{
+    display: flex;
+    justify-content: space-between;
+}
+.middleColumns > div {
+    width: 30%;
+    background-color: aqua;
+	
+}
 
 p {
 	margin-bottom: 1em;	
@@ -48,7 +56,14 @@ p {
 	float: left;
 	padding-right: 1em;
 }
-
+dt {
+	color: #663300;
+	font-weight: bold;
+	margin-bottom: 0.5em;
+}
+dd {
+	margin-bottom: 1em;
+}
 .gallery img {
 	display: block;
 	margin: 0 auto;
@@ -59,6 +74,18 @@ p {
 	margin-right: 1em;
     text-align: center;
 }
-@media screen and (max-width:800px){
+@media only screen and (min-width: 481px) and (max-width: 800px) {
+    .middleColumns{
+    display: flex;
+    flex-wrap: wrap;
+}
+    .middleColumns div:nth-child(3){ order: 2; width: 48%; }
+    .middleColumns div:nth-child(2){ order: 3; width: 100%;}
+    
+    .middleColumns > div {
+    width: 48%;
+    background-color: aqua;
+	
+}   
     
 }
