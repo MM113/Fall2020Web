@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Untitled Document</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <style>
+    main {
+  display: flex;
+  justify-content: center;
+  
+}
+#form-wrapper {
+  border-radius: 10px;
+  background-color: #90D4A8;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+}
+h3 {
+  text-align: center;
+}
+#form {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin: 20px;
+}
+    
+    
+    
+    </style>
+</head>
+<body> 
+  <div class="container">
+	<main>
+  <div id="form-wrapper">
+    <h3>Airport Survey</h3>
+    <form id='form'>
+      <label for='airport-field'>Airport Code:</label><br>
+      <input 
+        type='text' 
+        id='airport-field' 
+        pattern=[A-Z]{3} 
+        placeholder='Enter the 3 capitolized letter code.' 
+        required
+      /><br>
+      <label for='rate-field'>Rating(1-10):</label><br>
+      <input 
+        type='number' 
+        id='rate-field' 
+        min='1' 
+        max='10' 
+        required
+      /><br>
+      <label for='name-field'>Name:</label><br>
+      <input 
+        type='text' 
+        id='name-field'
+        required
+      /><br>
+      <label for='donation-field'>
+        Would you like to donate to charity?<br>
+        Enter a dollar amount in multiples of $5:
+      </label><br>
+      <input 
+        type='number' 
+        id='donation-field' 
+        step='5'
+      /><br>
+      <button type="submit">Submit</button>
+    </form> 
+  </div>
+</main>
+</div>
+
+
+</body>
+</html>
